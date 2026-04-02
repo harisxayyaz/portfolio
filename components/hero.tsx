@@ -116,15 +116,22 @@ export function Hero() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              I&apos;m a Full Stack Developer focused on building clean,
-              accessible, and high-performance web applications. I enjoy turning
-              complex problems into simple, intuitive, and well-designed
-              interfaces, with strong attention to detail, performance, and user
-              experience.
+              I&apos;m a Full Stack Developer with 2+ years of experience
+              building scalable, high-performance web applications. I specialize
+              in <span className="font-medium text-foreground">Next.js</span>,{" "}
+              <span className="font-medium text-foreground">React</span>,{" "}
+              <span className="font-medium text-foreground">TypeScript</span>,
+              and <span className="font-medium text-foreground">Node.js</span>,
+              with experience integrating{" "}
+              <span className="font-medium text-foreground">Three.js</span> for
+              interactive 3D experiences and building secure, production-ready
+              REST APIs. I take pride in crafting clean, accessible, and
+              responsive user interfaces while ensuring performance and SEO
+              optimization.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Currently, I&apos;m a Full Stack Developer at{" "}
+              Currently, I work at{" "}
               <a
                 href="https://hayaland.com"
                 target="_blank"
@@ -133,28 +140,31 @@ export function Hero() {
               >
                 Hayaland
               </a>
-              , where I develop responsive, pixel-perfect user interfaces and
-              integrate complex APIs for e-commerce platforms. My primary stack
-              includes{" "}
-              <span className="font-medium text-foreground">React</span>,{" "}
-              <span className="font-medium text-foreground">Next.js</span>, and{" "}
-              <span className="font-medium text-foreground">TypeScript</span>,
-              and I also work with Three.js to build interactive 3D web
-              experiences.
+              , where I develop pixel-perfect, responsive UIs and integrate
+              complex APIs for e-commerce platforms. My work spans frontend
+              architecture, backend services, and database integration,
+              leveraging tools like{" "}
+              <span className="font-medium text-foreground">Supabase</span>,{" "}
+              <span className="font-medium text-foreground">PostgreSQL</span>,
+              and <span className="font-medium text-foreground">MongoDB</span>{" "}
+              to deliver end-to-end solutions for remote teams.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Previously, I&apos;ve worked on a variety of software projects,
-              including AI-powered legal applications and social media
-              management platforms, which helped me gain experience across
-              different domains and system architectures. I graduated with a BS
-              in Computer Science in 2024.
+              Previously, I&apos;ve contributed to diverse projects, including
+              AI-powered legal applications and social media management
+              platforms, gaining experience across multiple domains and system
+              architectures. I graduated with a{" "}
+              <span className="font-medium text-foreground">
+                BS in Computer Science
+              </span>{" "}
+              from COMSATS University in 2024.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Outside of work, I spend my time learning new technologies,
-              building side projects, and exploring ideas that solve real-world
-              problems through software.
+              Outside of work, I enjoy exploring new technologies, contributing
+              to open-source projects, and building side projects that solve
+              real-world problems.
             </p>
           </motion.div>
         </div>
