@@ -100,7 +100,7 @@ export function Experience() {
           className="mt-12"
         >
           <h3 className="text-xl font-semibold text-foreground">Education</h3>
-          <div className="mt-6 p-6 rounded-xl bg-card border border-border">
+          <div className="mt-6 p-6 rounded-xl bg-card border border-border  hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <div>
                 <h4 className="text-lg font-semibold text-foreground">
