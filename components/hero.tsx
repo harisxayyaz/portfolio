@@ -20,7 +20,7 @@ export function Hero() {
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-border bg-muted">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.JPG"
                   alt="Muhammad Haris Ayyaz"
                   width={914}
                   height={914}
