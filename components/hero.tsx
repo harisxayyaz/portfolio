@@ -65,7 +65,7 @@ export function Hero() {
                       href={item.href}
                       className="group flex items-center gap-4 text-xs font-medium tracking-widest text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <span className="h-px w-8 bg-muted-foreground group-hover:w-16 group-hover:bg-foreground transition-all duration-300" />
+                      <span className="h-px w-4 bg-muted-foreground group-hover:w-10 group-hover:bg-foreground transition-all duration-300" />
                       {item.name}
                     </a>
                   </li>
