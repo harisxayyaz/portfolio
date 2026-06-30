@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Briefcase } from "lucide-react";
 import Image from "next/image";
+
+// TODO: replace with your real Upwork profile URL
+const UPWORK_URL = "https://www.upwork.com/freelancers/~REPLACE_ME";
 
 export function Hero() {
   return (
@@ -20,7 +23,7 @@ export function Hero() {
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-border bg-muted">
                 <Image
-                  src="/profile.JPG"
+                  src="/profile.png"
                   alt="Muhammad Haris Ayyaz"
                   width={914}
                   height={914}
@@ -45,6 +48,25 @@ export function Hero() {
                 I build accessible, pixel-perfect digital experiences for the
                 web.
               </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                <a
+                  href={UPWORK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  <Briefcase size={16} />
+                  Hire me on Upwork
+                </a>
+                <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                  </span>
+                  Available for work
+                </span>
+              </div>
             </motion.div>
 
             {/* Quick Navigation */}
@@ -116,8 +138,8 @@ export function Hero() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              I&apos;m a Full Stack Developer with 2+ years of experience
-              building scalable, high-performance web applications. I specialize
+              I&apos;m a Full Stack Developer with 5+ years building modern,
+              scalable, high-performance web applications. I specialize
               in <span className="font-medium text-foreground">Next.js</span>,{" "}
               <span className="font-medium text-foreground">React</span>,{" "}
               <span className="font-medium text-foreground">TypeScript</span>,
@@ -131,7 +153,23 @@ export function Hero() {
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Currently, I work at{" "}
+              Currently, I work as a{" "}
+              <span className="font-medium text-foreground">
+                Full Stack Engineer
+              </span>{" "}
+              at{" "}
+              <span className="font-medium text-foreground">CCRIPT Agency</span>
+              , where my work spans full-stack web and{" "}
+              <span className="font-medium text-foreground">React Native</span>{" "}
+              mobile development,{" "}
+              <span className="font-medium text-foreground">DevOps</span>, and{" "}
+              <span className="font-medium text-foreground">AI integration</span>
+              {" "}— shipping end-to-end products from frontend architecture to
+              backend services, deployment, and CI/CD.
+            </p>
+
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
+              Previously at{" "}
               <a
                 href="https://hayaland.com"
                 target="_blank"
@@ -140,21 +178,14 @@ export function Hero() {
               >
                 Hayaland
               </a>
-              , where I develop pixel-perfect, responsive UIs and integrate
-              complex APIs for e-commerce platforms. My work spans frontend
-              architecture, backend services, and database integration,
-              leveraging tools like{" "}
+              , I built pixel-perfect, responsive e-commerce platforms and
+              integrated complex APIs, working across frontend, backend, and
+              databases like{" "}
               <span className="font-medium text-foreground">Supabase</span>,{" "}
               <span className="font-medium text-foreground">PostgreSQL</span>,
-              and <span className="font-medium text-foreground">MongoDB</span>{" "}
-              to deliver end-to-end solutions for remote teams.
-            </p>
-
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Previously, I&apos;ve contributed to diverse projects, including
-              AI-powered legal applications and social media management
-              platforms, gaining experience across multiple domains and system
-              architectures. I graduated with a{" "}
+              and <span className="font-medium text-foreground">MongoDB</span>.
+              I&apos;ve also contributed to AI-powered legal applications and
+              social media management platforms. I graduated with a{" "}
               <span className="font-medium text-foreground">
                 BS in Computer Science
               </span>{" "}

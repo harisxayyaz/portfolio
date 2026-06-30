@@ -7,7 +7,17 @@ import { ExternalLink } from "lucide-react"
 
 const experiences = [
   {
-    date: "2024 — PRESENT",
+    date: "FEB 2026 — PRESENT",
+    title: "Full Stack Engineer",
+    company: "CCRIPT Agency",
+    companyUrl: null,
+    location: "Remote",
+    description:
+      "Build and ship end-to-end products across web and mobile, including a full-stack React Native mobile application. Responsibilities span frontend and backend development, DevOps (deployment, CI/CD, environment setup), and AI integration into production applications.",
+    technologies: ["Next.js", "React Native", "TypeScript", "Node.js", "DevOps", "CI/CD", "AI Integration"],
+  },
+  {
+    date: "2024 — FEB 2026",
     title: "Full Stack Developer",
     company: "Hayaland",
     companyUrl: "https://hayaland.com",
@@ -20,7 +30,7 @@ const experiences = [
     date: "JUN — SEP 2024",
     title: "Full Stack Development Intern",
     company: "DevHawks",
-    companyUrl: "#",
+    companyUrl: null,
     location: "On-site",
     description:
       "Contributed to development of LawLens AI, an AI-based legal web application. Developed frontend features and secure backend REST APIs. Built responsive UI using Next.js and Tailwind CSS. Ensured smooth data flow between client and server with optimized API handling.",
@@ -63,15 +73,19 @@ export function Experience() {
               <div>
                 <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                   {exp.title} ·{" "}
-                  <a
-                    href={exp.companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 hover:underline"
-                  >
-                    {exp.company}
-                    <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  {exp.companyUrl ? (
+                    <a
+                      href={exp.companyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 hover:underline"
+                    >
+                      {exp.company}
+                      <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  ) : (
+                    <span>{exp.company}</span>
+                  )}
                 </h4>
                 <p className="mt-1 text-sm text-muted-foreground">{exp.location}</p>
                 <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
@@ -107,7 +121,7 @@ export function Experience() {
                   COMSATS University Islamabad
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  B.S. Computer Science — CGPA: 3.14
+                  B.S. Computer Science
                 </p>
               </div>
               <div className="text-xs font-medium tracking-wider text-muted-foreground uppercase">

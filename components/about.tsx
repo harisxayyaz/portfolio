@@ -6,10 +6,11 @@ import { useRef } from "react"
 
 const technologies = [
   { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "C++", "Java"] },
-  { category: "Frontend", items: ["Next.js", "React.js", "Tailwind CSS", "Shadcn/ui", "Three.js"] },
+  { category: "Frontend", items: ["Next.js", "React.js", "React Native", "Tailwind CSS", "Shadcn/ui", "Three.js"] },
   { category: "Backend", items: ["Node.js", "Express.js", "Flask", "REST APIs"] },
   { category: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Firebase", "Supabase"] },
-  { category: "Tools", items: ["Git", "AWS S3", "Vercel", "Redux Toolkit", "Zod", "Stripe"] },
+  { category: "AI & DevOps", items: ["OpenAI API", "Gemini API", "RAG", "CI/CD", "Vercel"] },
+  { category: "Tools", items: ["Git", "AWS S3", "Redux Toolkit", "Zod", "Stripe"] },
 ]
 
 export function About() {
