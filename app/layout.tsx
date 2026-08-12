@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({ 
@@ -15,14 +16,57 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Muhammad Haris Ayyaz | Full Stack Developer',
-  description: 'Full Stack Developer with 2+ years of experience building scalable web applications using Next.js, React, TypeScript, and Node.js. Specializing in frontend architecture, Three.js integration, and secure REST APIs.',
-  keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'Node.js', 'Web Developer', 'Frontend Developer', 'Backend Developer'],
-  authors: [{ name: 'Muhammad Haris Ayyaz' }],
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: [
+    'Full Stack Developer',
+    'Full Stack Engineer',
+    'Frontend Developer',
+    'Backend Developer',
+    'React Developer',
+    'Node.js Developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'PostgreSQL',
+    'Prisma',
+    'Redis',
+    'Socket.IO',
+    'REST APIs',
+    'RAG',
+    'Vertex AI',
+    'OpenAI API',
+    'Remote Developer',
+    'Pakistan',
+  ],
+  authors: [{ name: 'Muhammad Haris Ayyaz', url: SITE_URL }],
+  creator: 'Muhammad Haris Ayyaz',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Muhammad Haris Ayyaz | Full Stack Developer',
-    description: 'Full Stack Developer specializing in scalable web applications',
-    type: 'website',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: 'en_US',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   icons: {
     icon: [
@@ -43,6 +87,53 @@ export const metadata: Metadata = {
   },
 }
 
+// Structured data so recruiters and search engines can parse the profile.
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE_NAME,
+  jobTitle: 'Full Stack Developer',
+  description: SITE_DESCRIPTION,
+  url: SITE_URL,
+  email: 'mailto:harisayyaz42@gmail.com',
+  telephone: '+923171100332',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Islamabad',
+    addressCountry: 'PK',
+  },
+  sameAs: [
+    'https://github.com/harisxayyaz',
+    'https://linkedin.com/in/harisxayyaz',
+  ],
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'COMSATS University Islamabad',
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: 'CCRIPT Agency',
+  },
+  knowsAbout: [
+    'TypeScript',
+    'JavaScript',
+    'Node.js',
+    'Express.js',
+    'React',
+    'Next.js',
+    'PostgreSQL',
+    'Prisma',
+    'Redis',
+    'Socket.IO',
+    'REST APIs',
+    'Retrieval-Augmented Generation',
+    'Vertex AI',
+    'OpenAI API',
+    'Google Cloud Platform',
+    'AWS',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,6 +142,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

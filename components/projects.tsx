@@ -3,79 +3,93 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Layers, Bot, Store } from "lucide-react";
+import { ExternalLink, Github, Layers, Bot, Store, Sparkles, Lock } from "lucide-react";
 
 const projects = [
   {
-    title: "Hayaland Store",
+    title: "Autonomous AI Operations Agent",
+    badge: "Client project (under NDA)",
+    featured: true,
     description:
-      "A full-featured e-commerce platform built from scratch with pixel-perfect, responsive design. Features include product browsing, cart management, checkout flow, and interactive 3D product models.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Three.js",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "Zod",
+      "A production LLM agent that answers natural-language questions over live platform and loan data, deployed on GCP behind an authenticated gateway.",
+    highlights: [
+      "47 domain skills covering platform operations, reporting and loan data",
+      "Access-controlled SQL generation so every query respects tenant and role permissions",
+      "Vertex AI RAG knowledge base over federal mortgage underwriting guidelines",
     ],
-    liveUrl: "https://store.hayaland.com/jp",
-    githubUrl: null,
-    icon: Store,
-    impact:
-      "Improved SEO ranking and user engagement with dynamic metadata and optimized performance.",
-  },
-  {
-    title: "POPULA",
-    description:
-      "A comprehensive platform for businesses to manage leads and publish content across multiple social platforms. Features AI-based content and poster generation using Gemini API.",
-    technologies: [
-      "Next.js",
-      "Gemini API",
-      "Stripe",
-      "Mailgun",
-      "Firebase",
-      "Tailwind CSS",
-    ],
+    technologies: ["Vertex AI", "RAG", "GCP", "PostgreSQL", "Node.js", "TypeScript"],
     liveUrl: null,
-    githubUrl: "https://github.com/harisxayyaz/POPULA",
-    icon: Layers,
+    githubUrl: null,
+    icon: Sparkles,
     impact:
-      "Enabled businesses to scale their social media presence and track insights effectively.",
+      "Replaced manual reporting requests with self-serve, permission-aware answers for operations teams.",
   },
   {
     title: "Codebase-AI",
+    badge: "RAG Application",
+    featured: false,
     description:
-      "A full-stack RAG application that allows users to upload GitHub repositories and chat with the codebase using LLMs. Implements embeddings and vector search for contextual code explanations.",
-    technologies: [
-      "Next.js",
-      "OpenAI API",
-      "RAG",
-      "Vector DB",
-      "TypeScript",
-      "Tailwind CSS",
+      "An AI application for chatting with GitHub repositories using LLMs and retrieval-augmented generation.",
+    highlights: [
+      "Code parsing and chunking tuned for source files",
+      "Embeddings and vector search for semantic retrieval",
+      "OpenAI API integration for contextual code explanations",
     ],
+    technologies: ["Next.js", "OpenAI API", "RAG", "Vector Search", "TypeScript"],
     liveUrl: "https://codebase-ai.vercel.app/",
     githubUrl: "https://github.com/harisxayyaz/codebase-ai",
     icon: Bot,
     impact:
-      "Provides developers with instant code understanding and architecture insights.",
+      "Gives developers instant architecture insight into an unfamiliar repository.",
+  },
+  {
+    title: "Hayaland Store",
+    badge: "Production e-commerce",
+    featured: false,
+    description:
+      "A full e-commerce platform built from scratch with pixel-perfect, responsive design, covering product browsing, cart, checkout and interactive 3D product models.",
+    highlights: [
+      "Three.js product viewer with Redux Toolkit state management",
+      "Zod schema validation across API boundaries",
+      "Dynamic metadata, sitemaps and robots.txt for SEO and indexing",
+    ],
+    technologies: ["Next.js", "TypeScript", "Three.js", "Tailwind CSS", "Redux Toolkit", "Zod"],
+    liveUrl: "https://store.hayaland.com/jp",
+    githubUrl: null,
+    icon: Store,
+    impact: "Live storefront serving customers, with improved SEO ranking and engagement.",
   },
   {
     title: "Buyback Platform",
+    badge: "Production e-commerce",
+    featured: false,
     description:
-      "A device buyback platform enabling users to sell their used devices. Features include device condition assessment, price estimation, and seamless checkout process.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "Tailwind CSS",
-      "Zod",
+      "A device buyback platform that lets users sell used devices, with condition assessment, price estimation and a streamlined checkout flow.",
+    highlights: [
+      "Multi-step condition assessment with live price estimation",
+      "Shared design system and validation layer with the main storefront",
     ],
+    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Zod"],
     liveUrl: "https://buyback.hayaland.com/jp",
     githubUrl: null,
     icon: Store,
-    impact:
-      "Streamlined the device trade-in process with intuitive UX and accurate pricing.",
+    impact: "Streamlined device trade-ins with intuitive UX and accurate pricing.",
+  },
+  {
+    title: "POPULA",
+    badge: "Side project",
+    featured: false,
+    description:
+      "A platform for businesses to manage leads and publish content across multiple social platforms, with AI-generated copy and posters.",
+    highlights: [
+      "Gemini API content and poster generation",
+      "Stripe billing and Mailgun transactional email",
+    ],
+    technologies: ["Next.js", "Gemini API", "Stripe", "Mailgun", "Firebase", "Tailwind CSS"],
+    liveUrl: null,
+    githubUrl: "https://github.com/harisxayyaz/POPULA",
+    icon: Layers,
+    impact: "Lets small teams scale social presence and track insights in one place.",
   },
 ];
 
@@ -97,6 +111,11 @@ export function Projects() {
           <h3 className="mt-2 text-3xl md:text-4xl font-bold text-foreground">
             Featured Work
           </h3>
+          <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
+            A mix of production systems I shipped for clients and employers, plus
+            projects I built on my own. Some client work is under NDA, so it&apos;s
+            described without proprietary detail.
+          </p>
         </motion.div>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
@@ -108,13 +127,23 @@ export function Projects() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
+                className={`group relative flex flex-col p-6 rounded-xl bg-card border transition-all duration-300 hover:border-primary/50 ${
+                  project.featured
+                    ? "md:col-span-2 border-primary/30"
+                    : "border-border"
+                }`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary">
                     <Icon size={24} />
                   </div>
                   <div className="flex items-center gap-3">
+                    {!project.liveUrl && !project.githubUrl && (
+                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                        <Lock size={13} />
+                        Private
+                      </span>
+                    )}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -140,17 +169,41 @@ export function Projects() {
                   </div>
                 </div>
 
-                <h4 className="mt-4 text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {project.title}
-                </h4>
+                <div className="mt-4 flex flex-wrap items-center gap-3">
+                  <h4 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h4>
+                  {project.badge && (
+                    <span className="px-2.5 py-1 text-[11px] font-medium tracking-wide uppercase text-muted-foreground bg-secondary rounded-full">
+                      {project.badge}
+                    </span>
+                  )}
+                </div>
+
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                <p className="mt-3 text-xs text-primary/80 italic">
+
+                <ul className="mt-4 space-y-2">
+                  {project.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="flex gap-3 text-sm text-muted-foreground leading-relaxed"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60"
+                      />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-4 text-xs text-primary/80 italic">
                   {project.impact}
                 </p>
 
-                <ul className="mt-4 flex flex-wrap gap-2">
+                <ul className="mt-auto flex flex-wrap gap-2 pt-4">
                   {project.technologies.map((tech) => (
                     <li
                       key={tech}

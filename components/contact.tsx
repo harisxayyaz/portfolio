@@ -62,10 +62,27 @@ export function Contact() {
             Get In Touch
           </h3>
           <p className="mt-4 max-w-xl mx-auto text-muted-foreground leading-relaxed">
-            I&apos;m currently open to new opportunities and would love to hear
-            from you. Whether you have a question or just want to say hi,
-            I&apos;ll do my best to get back to you!
+            I&apos;m open to full-time and contract roles in backend, full stack
+            or AI work. I&apos;m based in Islamabad (UTC+5) and comfortable
+            overlapping with European and US hours. I reply to every message
+            within 24 hours.
           </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {[
+              "Full-time",
+              "Contract",
+              "Remote",
+              "Backend / Full Stack",
+              "AI & Integrations",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1.5 text-xs font-medium text-primary bg-primary/10 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         <div className="mt-12 grid lg:grid-cols-2 gap-12">

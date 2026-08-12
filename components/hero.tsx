@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, Briefcase } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download, MapPin } from "lucide-react";
 import Image from "next/image";
-
-// TODO: replace with your real Upwork profile URL
-const UPWORK_URL = "https://www.upwork.com/freelancers/~REPLACE_ME";
 
 export function Hero() {
   return (
@@ -25,8 +22,8 @@ export function Hero() {
                 <Image
                   src="/profile.png"
                   alt="Muhammad Haris Ayyaz"
-                  width={914}
-                  height={914}
+                  width={400}
+                  height={400}
                   className="object-cover"
                   priority
                 />
@@ -45,27 +42,43 @@ export function Hero() {
                 Full Stack Developer
               </h2>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-lg">
-                I build accessible, pixel-perfect digital experiences for the
-                web.
+                I build production web applications end to end, from the
+                interface a user clicks through to the APIs, data models and
+                real-time systems behind it.
               </p>
 
-              <div className="mt-6 flex flex-wrap items-center gap-4">
-                <a
-                  href={UPWORK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-                >
-                  <Briefcase size={16} />
-                  Hire me on Upwork
-                </a>
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground">
+              {/* Recruiter-facing quick facts */}
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2">
+                  <MapPin size={15} />
+                  Islamabad, Pakistan · Remote (PKT, UTC+5)
+                </span>
+                <span className="inline-flex items-center gap-2 font-medium">
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
                     <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
                   </span>
-                  Available for work
+                  Open to full-time & contract
                 </span>
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href="/Muhammad-Haris-Ayyaz-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  <Download size={16} />
+                  Download Resume
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  <Mail size={16} />
+                  Get in touch
+                </a>
               </div>
             </motion.div>
 
@@ -138,34 +151,44 @@ export function Hero() {
             className="space-y-6"
           >
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              I&apos;m a Full Stack Developer with 5+ years building modern,
-              scalable, high-performance web applications. I specialize
-              in <span className="font-medium text-foreground">Next.js</span>,{" "}
+              I&apos;m a Full Stack Developer with{" "}
+              <span className="font-medium text-foreground">
+                2+ years of experience
+              </span>{" "}
+              building production web applications with{" "}
+              <span className="font-medium text-foreground">Next.js</span>,{" "}
               <span className="font-medium text-foreground">React</span>,{" "}
-              <span className="font-medium text-foreground">TypeScript</span>,
-              and <span className="font-medium text-foreground">Node.js</span>,
-              with experience integrating{" "}
-              <span className="font-medium text-foreground">Three.js</span> for
-              interactive 3D experiences and building secure, production-ready
-              REST APIs. I take pride in crafting clean, accessible, and
-              responsive user interfaces while ensuring performance and SEO
-              optimization.
+              <span className="font-medium text-foreground">TypeScript</span>,{" "}
+              <span className="font-medium text-foreground">Node.js</span> and{" "}
+              <span className="font-medium text-foreground">PostgreSQL</span>. I
+              work across the whole stack, building the user-facing interface and
+              the APIs, backend services, third-party integrations and real-time
+              systems underneath it, then taking the result to production.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Currently, I work as a{" "}
+              Currently a{" "}
               <span className="font-medium text-foreground">
                 Full Stack Engineer
               </span>{" "}
               at{" "}
-              <span className="font-medium text-foreground">CCRIPT Agency</span>
-              , where my work spans full-stack web and{" "}
-              <span className="font-medium text-foreground">React Native</span>{" "}
-              mobile development,{" "}
-              <span className="font-medium text-foreground">DevOps</span>, and{" "}
-              <span className="font-medium text-foreground">AI integration</span>
-              {" "}— shipping end-to-end products from frontend architecture to
-              backend services, deployment, and CI/CD.
+              <span className="font-medium text-foreground">CCRIPT Agency</span>,
+              where I build both the{" "}
+              <span className="font-medium text-foreground">Next.js</span>{" "}
+              interfaces and the services behind them on a large mortgage-tech
+              platform: a{" "}
+              <span className="font-medium text-foreground">
+                loan pipeline engine
+              </span>{" "}
+              with JSON Logic work queues and SLA tracking, a{" "}
+              <span className="font-medium text-foreground">
+                unified real-time messaging platform
+              </span>{" "}
+              for SMS, voice, email and social DMs built on{" "}
+              <span className="font-medium text-foreground">Socket.IO</span> and{" "}
+              <span className="font-medium text-foreground">Redis Pub/Sub</span>,
+              and multi-tenant financial integrations spanning credit &amp; income
+              verification, e-signatures, MISMO/FNM parsers and OCR.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
@@ -178,24 +201,33 @@ export function Hero() {
               >
                 Hayaland
               </a>
-              , I built pixel-perfect, responsive e-commerce platforms and
-              integrated complex APIs, working across frontend, backend, and
-              databases like{" "}
-              <span className="font-medium text-foreground">Supabase</span>,{" "}
-              <span className="font-medium text-foreground">PostgreSQL</span>,
-              and <span className="font-medium text-foreground">MongoDB</span>.
-              I&apos;ve also contributed to AI-powered legal applications and
-              social media management platforms. I graduated with a{" "}
+              , I built{" "}
               <span className="font-medium text-foreground">
-                BS in Computer Science
+                store.hayaland.com
               </span>{" "}
-              from COMSATS University in 2024.
+              and{" "}
+              <span className="font-medium text-foreground">
+                buyback.hayaland.com
+              </span>{" "}
+              from scratch. Both are pixel-perfect responsive storefronts with
+              interactive{" "}
+              <span className="font-medium text-foreground">Three.js</span>{" "}
+              product experiences, Zod schema validation and SEO work that
+              improved indexing and production reliability.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Outside of work, I enjoy exploring new technologies, contributing
-              to open-source projects, and building side projects that solve
-              real-world problems.
+              I also build{" "}
+              <span className="font-medium text-foreground">AI systems</span>,
+              most recently a production LLM operations agent on GCP with 47
+              domain skills, access-controlled SQL generation and a{" "}
+              <span className="font-medium text-foreground">Vertex AI RAG</span>{" "}
+              knowledge base over federal mortgage underwriting guidelines. I hold
+              a{" "}
+              <span className="font-medium text-foreground">
+                BS in Computer Science
+              </span>{" "}
+              from COMSATS University Islamabad.
             </p>
           </motion.div>
         </div>

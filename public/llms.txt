@@ -1,0 +1,76 @@
+# Muhammad Haris Ayyaz
+
+> Full Stack Developer with 2+ years of experience building production web
+> applications with Next.js, React, TypeScript, Node.js and PostgreSQL. Works
+> across the stack: React interfaces, APIs, backend services, third-party
+> integrations, real-time systems and AI features, taken through to production.
+
+- Role: Full Stack Engineer at CCRIPT Agency (since May 2026)
+- Location: Islamabad, Pakistan. Works remotely (PKT, UTC+5)
+- Availability: open to full-time and contract roles
+- Email: harisayyaz42@gmail.com
+- Phone: +92 317 1100332
+- GitHub: https://github.com/harisxayyaz
+- LinkedIn: https://linkedin.com/in/harisxayyaz
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Python, SQL
+- Frontend: Next.js, React, Tailwind CSS, Shadcn/ui, Redux Toolkit, Three.js
+- Backend: Node.js, Express.js, REST APIs, Prisma, Socket.IO, Zod
+- Databases and caching: PostgreSQL, MongoDB, Redis, Supabase
+- AI and integrations: OpenAI API, Vertex AI, RAG, Gemini API, vector search
+- Cloud and tools: AWS, GCP, Vercel, Render, Git/GitHub, CI/CD
+
+## Experience
+
+### Full Stack Engineer, CCRIPT Agency (since May 2026, remote)
+
+Full stack engineering on a large multi-tenant mortgage-tech platform, owning
+features from the React interface down to the database.
+
+- Backend services with Node.js, Express, PostgreSQL, Prisma and Redis across
+  400+ data models, 200+ API modules and 150+ domain services
+- Next.js and React interfaces on top of those services, including pipeline
+  dashboards and the live messaging inbox
+- Loan pipeline engine with JSON Logic work queues, SLA tracking, role-based
+  defaults and urgency-based prioritization
+- Unified real-time messaging platform for SMS, voice, email and social DMs
+  using Socket.IO and Redis Pub/Sub across horizontally scaled instances
+- Multi-tenant communications and financial integrations: transactional email,
+  OAuth/SMTP/ESP providers, credit and income verification, e-signatures,
+  valuations, MISMO/FNM parsers and OCR
+
+### Full Stack Engineer, Hayaland (September 2024 to April 2026, remote)
+
+- Built store.hayaland.com and buyback.hayaland.com from scratch with
+  responsive, pixel-perfect UIs
+- Integrated multiple third-party APIs with Zod schema validation
+- Interactive 3D product experiences with Three.js, state with Redux Toolkit
+- SEO, indexing and production reliability through dynamic metadata, sitemaps,
+  deployment and monitoring
+
+### Full Stack Development Intern, DevHawks (June to September 2024, on-site)
+
+- Contributed to LawLens AI, an AI-assisted legal research web application
+- Frontend features and secure backend REST APIs with Node.js and Express
+
+## Projects
+
+- Autonomous AI Operations Agent (client project, under NDA): production LLM
+  agent for natural-language queries over live platform and loan data on GCP,
+  with 47 domain skills, access-controlled SQL generation and a Vertex AI RAG
+  knowledge base over federal mortgage underwriting guidelines
+- Codebase-AI: chat with GitHub repositories using LLMs and RAG, with code
+  parsing, chunking, embeddings and vector search.
+  https://codebase-ai.vercel.app/
+- Hayaland Store: production e-commerce platform with a Three.js product viewer.
+  https://store.hayaland.com/jp
+- Buyback Platform: device buyback with condition assessment and price
+  estimation. https://buyback.hayaland.com/jp
+- POPULA: lead management and multi-platform social publishing with Gemini API
+  content generation. https://github.com/harisxayyaz/POPULA
+
+## Education
+
+B.S. Computer Science, COMSATS University Islamabad, 2021 to 2024. CGPA 3.14.
